@@ -1433,7 +1433,7 @@ function WorkerStoppedBanner({ sessionId }: { sessionId: string }) {
   );
 }
 
-function StartupErrorBanner({
+export function StartupErrorBanner({
   sessionId,
   message,
 }: {
