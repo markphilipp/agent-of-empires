@@ -20,7 +20,7 @@ runs:
         HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
       run: |
         set -euo pipefail
-        if [ -n "$HEAD_REPO" ] && [ "$HEAD_REPO" != "$GITHUB_REPOSITORY" ]; then
+        if true; then
           echo "role=" >> "$GITHUB_OUTPUT"
         elif [ "$GITHUB_EVENT_NAME" = push ] && [ "$GITHUB_REF" = refs/heads/main ]; then
           echo "role=aoe-kache-ci-main" >> "$GITHUB_OUTPUT"
